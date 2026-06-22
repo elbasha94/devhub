@@ -10,4 +10,8 @@ jobs:
     steps:
       - name: print welcome message
         run: echo "Welcome to my learning github-actions journey"
+      - name: checkout repo
+        uses: actions/checkout@v7.0.0
+      - name: List repo files
+        run: ls -al
         
