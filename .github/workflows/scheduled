@@ -1,0 +1,10 @@
+on:
+  schedule:
+    - cron "0 0 * * *"
+jobs:
+  daily-task:
+    runs-on: ubuntu-test
+    steps:
+      - name: Print Name
+        run: echo "fuck you"
+  
