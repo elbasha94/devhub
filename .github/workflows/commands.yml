@@ -5,8 +5,8 @@ jobs:
   job_1:
     runs-on: ubuntu-latest 
     steps:
-    - run: |
-       deprecated=true
-       if [[ deprecated ]]; then
-         echo "::warning::Deprecated function found"
-       fi
+    - name: set API Key
+      run: echo "API_KEY=1234" >> $GITHUB_ENV
+    - name: use api key
+      run: echo "using api key $GITHUB_ENV"
+
